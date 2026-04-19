@@ -5,13 +5,21 @@ import { notFound } from "next/navigation";
 
 const oldResourceName = ["ca", "bin"].join("");
 const newResourceName = "room";
+const roomImageVersion = "rooms-v2";
 
 function normalizeRoomImage(image) {
   if (!image) return image;
 
-  return image
+  const normalizedImage = image
     .replace(`${oldResourceName}-images`, `${newResourceName}-images`)
     .replace(`${oldResourceName}-`, `${newResourceName}-`);
+
+  if (!normalizedImage.includes(`${newResourceName}-images`)) {
+    return normalizedImage;
+  }
+
+  const separator = normalizedImage.includes("?") ? "&" : "?";
+  return `${normalizedImage}${separator}v=${roomImageVersion}`;
 }
 
 function normalizeRoom(room) {
@@ -108,7 +116,7 @@ export async function getBooking(id) {
     throw new Error("Booking could not get loaded");
   }
 
-  return data.map(normalizeBooking);
+  return data;
 }
 
 export async function getBookings(guestId) {
@@ -126,7 +134,7 @@ export async function getBookings(guestId) {
     throw new Error("Bookings could not get loaded");
   }
 
-  return data;
+  return data.map(normalizeBooking);
 }
 
 export async function getBookedDatesByRoomId(roomId) {
