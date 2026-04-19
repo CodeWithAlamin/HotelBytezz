@@ -11,7 +11,7 @@ export default function Page() {
         quality={80}
         className="object-cover object-top"
         src={bg}
-        alt="Mountains and forests around HotelBytezz"
+        alt="HotelBytezz stay in Dhaka, Bangladesh"
       />
 
       <div className="relative z-10 text-center">

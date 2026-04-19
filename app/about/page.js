@@ -22,8 +22,8 @@ export default async function Page() {
           <div className="space-y-8">
             <p>
               Where nature&rsquo;s beauty and comfortable living blend
-              seamlessly. Hidden away in the heart of the Italian Dolomites,
-              this is your paradise away from home. But it&rsquo;s not just
+              seamlessly. Set in the heart of Dhaka, Bangladesh, this is your
+              paradise away from home. But it&rsquo;s not just
               about the luxury rooms. It&rsquo;s about the experience of
               reconnecting with nature and enjoying simple pleasures with
               family.
@@ -31,9 +31,8 @@ export default async function Page() {
             <p>
               Our {rooms.length} luxury rooms provide a cozy base, but the
               real freedom and peace you&rsquo;ll find in the surrounding
-              mountains. Wander through lush forests, breathe in the fresh air,
-              and watch the stars twinkle above from the warmth of a campfire or
-              your hot tub.
+              cityscape. Enjoy the rhythm of local life, discover the energy of
+              Dhaka, and settle into the comfort of your stay.
             </p>
             <p>
               This is where memorable moments are made, surrounded by
@@ -80,7 +79,7 @@ export default async function Page() {
             </p>
             <p>
               Over the years, we&rsquo;ve maintained the essence of HotelBytezz,
-              blending the timeless beauty of the mountains with the personal
+              blending Dhaka&rsquo;s vibrant energy with the personal
               touch only a family business can offer. Here, you&rsquo;re not
               just a guest; you&rsquo;re part of our extended family. So join us
               at HotelBytezz soon, where tradition meets tranquility, and every
