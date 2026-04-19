@@ -10,8 +10,8 @@ const josefin = Josefin_Sans({
 
 export const metadata = {
   title: {
-    template: "%s | The Wild Oasis Booking | Alamin (CodePapa360)",
-    default: "The Wild Oasis Booking | Alamin (CodePapa360)",
+    template: "%s | The Wild Oasis Booking | Alamin (CodeWithAlamin)",
+    default: "The Wild Oasis Booking | Alamin (CodeWithAlamin)",
   },
 };
 
@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
       />
       <meta
         name="description"
-        content="Explore The Wild Oasis Booking by Alamin (CodePapa360). Find unique destinations, thrilling activities, and plan your next wild getaway."
+        content="Explore The Wild Oasis Booking by Alamin (CodeWithAlamin). Find unique destinations, thrilling activities, and plan your next wild getaway."
       />
       <meta name="application-name" content="The Wild Oasis Booking" />
       <meta name="referrer" content="origin-when-cross-origin" />
@@ -38,8 +38,8 @@ export default function RootLayout({ children }) {
       />
       <meta name="mobile-web-app-capable" content="yes" />
       <meta name="format-detection" content="telephone=no" />
-      <meta name="author" content="Alamin, CodePapa360" />
-      <meta property="og:author" content="Alamin, CodePapa360" />
+      <meta name="author" content="Alamin, CodeWithAlamin" />
+      <meta property="og:author" content="Alamin, CodeWithAlamin" />
 
       <meta
         name="keywords"
@@ -53,7 +53,7 @@ export default function RootLayout({ children }) {
             Adventure Trips, 
             Jonas Schmedtmann, 
             Alamin, 
-            CodePapa360"
+            CodeWithAlamin"
       />
       <meta name="robots" content="index, follow" />
       <meta property="og:type" content="website" />
@@ -64,7 +64,7 @@ export default function RootLayout({ children }) {
       <meta property="og:title" content="The Wild Oasis Booking" />
       <meta
         property="og:description"
-        content="Explore The Wild Oasis Booking by Alamin (CodePapa360). Find unique destinations, thrilling activities, and plan your next wild getaway."
+        content="Explore The Wild Oasis Booking by Alamin (CodeWithAlamin). Find unique destinations, thrilling activities, and plan your next wild getaway."
       />
       <meta
         property="og:image"
@@ -93,7 +93,7 @@ export default function RootLayout({ children }) {
       <meta name="twitter:title" content="The Wild Oasis Booking" />
       <meta
         name="twitter:description"
-        content="Explore The Wild Oasis Booking by Alamin (CodePapa360). Find unique destinations, thrilling activities, and plan your next wild getaway."
+        content="Explore The Wild Oasis Booking by Alamin (CodeWithAlamin). Find unique destinations, thrilling activities, and plan your next wild getaway."
       />
       <meta
         name="twitter:image"
@@ -103,8 +103,8 @@ export default function RootLayout({ children }) {
         name="twitter:url"
         content="https://the-wild-oasis-booking-alamin.vercel.app"
       />
-      <meta name="twitter:site" content="@CodePapa360" />
-      <meta name="twitter:creator" content="@CodePapa360" />
+      <meta name="twitter:site" content="@CodeWithAlamin" />
+      <meta name="twitter:creator" content="@CodeWithAlamin" />
       <meta
         name="twitter:image:alt"
         content="Thumbnail image of The Wild Oasis Booking website"
