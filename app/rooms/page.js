@@ -1,12 +1,12 @@
 import { Suspense } from "react";
-import CabinList from "../_components/CabinList";
+import RoomList from "../_components/RoomList";
 import Spinner from "../_components/Spinner";
 import Filter from "../_components/Filter";
 
 export const revalidate = 3600;
 
 export const metadata = {
-  title: "Cabins",
+  title: "Rooms",
 };
 
 export default function Page({ searchParams }) {
@@ -15,10 +15,10 @@ export default function Page({ searchParams }) {
   return (
     <div>
       <h1 className="text-4xl mb-5 text-accent-400 font-medium">
-        Our Luxury Cabins
+        Our Luxury Rooms
       </h1>
       <p className="text-primary-200 text-lg mb-10">
-        Cozy yet luxurious cabins, located right in the heart of the Italian
+        Cozy yet luxurious rooms, located right in the heart of the Italian
         Dolomites. Imagine waking up to beautiful mountain views, spending your
         days exploring the dark forests around, or just relaxing in your private
         hot tub under the stars. Enjoy nature&rsquo;s beauty in your own little
@@ -31,7 +31,7 @@ export default function Page({ searchParams }) {
       </div>
 
       <Suspense fallback={<Spinner />} key={filter}>
-        <CabinList filter={filter} />
+        <RoomList filter={filter} />
       </Suspense>
     </div>
   );

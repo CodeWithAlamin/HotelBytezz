@@ -1,19 +1,19 @@
-import { getBookedDatesByCabinId, getCabin } from "@/app/_lib/data-service";
+import { getBookedDatesByRoomId, getRoom } from "@/app/_lib/data-service";
 
 // The name of the function like this one GET is important. It must match the HTTP method you want to handle. Using this method you can create your own custom API endpoints. It's not that common and useful anymore, but it's still possible to use it. Nowadays we have something called server actions that are more powerful and easier to use. But in case you need it you can use this method to create your own custom API endpoints.
 
 export async function GET(request, { params }) {
-  const { cabinId } = params;
+  const { roomId } = params;
 
   try {
-    const [cabin, bookedDates] = await Promise.all([
-      getCabin(cabinId),
-      getBookedDatesByCabinId(cabinId),
+    const [room, bookedDates] = await Promise.all([
+      getRoom(roomId),
+      getBookedDatesByRoomId(roomId),
     ]);
 
-    return Response.json([cabin, bookedDates]);
+    return Response.json([room, bookedDates]);
   } catch (error) {
-    return Response.json({ message: "Cabin not found" });
+    return Response.json({ message: "Room not found" });
   }
   return Response.json({ test: "test" });
 }

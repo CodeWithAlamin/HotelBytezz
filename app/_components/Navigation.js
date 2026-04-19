@@ -8,10 +8,10 @@ export default function Navigation({ handleToggle, session }) {
         <li>
           <Link
             onClick={handleToggle}
-            href="/cabins"
+            href="/rooms"
             className="hover:text-accent-400 transition-colors text-black md:text-primary-100"
           >
-            Cabins
+            Rooms
           </Link>
         </li>
         <li>

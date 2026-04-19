@@ -1,34 +1,34 @@
-import Cabin from "@/app/_components/Cabin";
+import Room from "@/app/_components/Room";
 import Reservation from "@/app/_components/Reservation";
 import Spinner from "@/app/_components/Spinner";
-import { getCabin, getCabins } from "@/app/_lib/data-service";
+import { getRoom, getRooms } from "@/app/_lib/data-service";
 import { Suspense } from "react";
 
 export async function generateMetadata({ params }) {
-  const cabin = await getCabin(params.cabinId);
+  const room = await getRoom(params.roomId);
 
   return {
-    title: `Cabin ${cabin.name}`,
+    title: `Room ${room.name}`,
   };
 }
 
 // This is for static page generation. if you have finite small amout of pages, then you can pre generate the pages so that it's not dynamic and it is fast.
 // export async function generateStaticParams() {
-//   const cabins = await getCabins();
+//   const rooms = await getRooms();
 
-//   const ids = cabins.map((cabin) => ({ cabinId: String(cabin.id) }));
+//   const ids = rooms.map((room) => ({ roomId: String(room.id) }));
 
 //   return ids;
 // }
 
 export default async function Page({ params }) {
-  const cabin = await getCabin(params.cabinId);
+  const room = await getRoom(params.roomId);
 
-  const { name } = cabin;
+  const { name } = room;
 
   return (
     <div className="max-w-6xl mx-auto mt-0 md:mt-8">
-      <Cabin cabin={cabin} />
+      <Room room={room} />
 
       <div>
         <h2 className="text-2xl md:text-5xl font-semibold text-center mb-10 text-accent-400">
@@ -36,7 +36,7 @@ export default async function Page({ params }) {
         </h2>
 
         <Suspense fallback={<Spinner />}>
-          <Reservation cabin={cabin} />
+          <Reservation room={room} />
         </Suspense>
       </div>
     </div>

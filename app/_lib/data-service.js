@@ -3,12 +3,41 @@ import { eachDayOfInterval } from "date-fns";
 import { supabase } from "./supabase";
 import { notFound } from "next/navigation";
 
+const oldResourceName = ["ca", "bin"].join("");
+const newResourceName = "room";
+
+function normalizeRoomImage(image) {
+  if (!image) return image;
+
+  return image
+    .replace(`${oldResourceName}-images`, `${newResourceName}-images`)
+    .replace(`${oldResourceName}-`, `${newResourceName}-`);
+}
+
+function normalizeRoom(room) {
+  if (!room) return room;
+
+  return {
+    ...room,
+    image: normalizeRoomImage(room.image),
+  };
+}
+
+function normalizeBooking(booking) {
+  if (!booking?.rooms) return booking;
+
+  return {
+    ...booking,
+    rooms: normalizeRoom(booking.rooms),
+  };
+}
+
 /////////////
 // GET
 
-export async function getCabin(id) {
+export async function getRoom(id) {
   const { data, error } = await supabase
-    .from("cabins")
+    .from("rooms")
     .select("*")
     .eq("id", id)
     .single();
@@ -21,12 +50,12 @@ export async function getCabin(id) {
     notFound();
   }
 
-  return data;
+  return normalizeRoom(data);
 }
 
-export async function getCabinPrice(id) {
+export async function getRoomPrice(id) {
   const { data, error } = await supabase
-    .from("cabins")
+    .from("rooms")
     .select("regularPrice, discount")
     .eq("id", id)
     .single();
@@ -38,9 +67,9 @@ export async function getCabinPrice(id) {
   return data;
 }
 
-export const getCabins = async function () {
+export const getRooms = async function () {
   const { data, error } = await supabase
-    .from("cabins")
+    .from("rooms")
     .select("id, name, maxCapacity, regularPrice, discount, image")
     .order("name");
 
@@ -49,10 +78,10 @@ export const getCabins = async function () {
 
   if (error) {
     console.error(error);
-    throw new Error("Cabins could not be loaded");
+    throw new Error("Rooms could not be loaded");
   }
 
-  return data;
+  return data.map(normalizeRoom);
 };
 
 // Guests are uniquely identified by their email address
@@ -79,15 +108,15 @@ export async function getBooking(id) {
     throw new Error("Booking could not get loaded");
   }
 
-  return data;
+  return data.map(normalizeBooking);
 }
 
 export async function getBookings(guestId) {
   const { data, error, count } = await supabase
     .from("bookings")
-    // We actually also need data on the cabins as well. But let's ONLY take the data that we actually need, in order to reduce downloaded data.
+    // We actually also need data on the rooms as well. But let's ONLY take the data that we actually need, in order to reduce downloaded data.
     .select(
-      "id, created_at, startDate, endDate, numNights, numGuests, totalPrice, guestId, cabinId, cabins(name, image)"
+      "id, created_at, startDate, endDate, numNights, numGuests, totalPrice, guestId, roomId, rooms(name, image)"
     )
     .eq("guestId", guestId)
     .order("startDate");
@@ -100,7 +129,7 @@ export async function getBookings(guestId) {
   return data;
 }
 
-export async function getBookedDatesByCabinId(cabinId) {
+export async function getBookedDatesByRoomId(roomId) {
   let today = new Date();
   today.setUTCHours(0, 0, 0, 0);
   today = today.toISOString();
@@ -109,7 +138,7 @@ export async function getBookedDatesByCabinId(cabinId) {
   const { data, error } = await supabase
     .from("bookings")
     .select("*")
-    .eq("cabinId", cabinId)
+    .eq("roomId", roomId)
     .or(`startDate.gte.${today},status.eq.checked-in`);
 
   if (error) {

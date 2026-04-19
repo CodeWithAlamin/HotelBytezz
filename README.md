@@ -34,7 +34,7 @@
 
 <!-- Brief -->
 <p align="center">
-Welcome to <b>HotelBytezz</b>! This is the customer version of the <a href="https://github.com/CodeWithAlamin/HotelBytezz">hotel management</a> web app, where users can view and book cabins based on availability, manage their bookings, and update their profiles. This project was a great learning experience for me as I explored Next.js, Auth.js (NextAuth), and many other advanced techniques.
+Welcome to <b>HotelBytezz</b>! This is the customer version of the <a href="https://github.com/CodeWithAlamin/HotelBytezz">hotel management</a> web app, where users can view and book rooms based on availability, manage their bookings, and update their profiles. This project was a great learning experience for me as I explored Next.js, Auth.js (NextAuth), and many other advanced techniques.
 </p>
 
 <!-- Screenshot -->
@@ -50,14 +50,14 @@ Check out the live app here: [HotelBytezz](https://hotelbytezz-alamin.vercel.app
 
 ## Admin Version
 
-I also built an **admin version** of this app for hotel employees to manage cabins, bookings, and guests. The repository is [here](https://github.com/CodeWithAlamin/HotelBytezz), and the live site is [here](https://hotelbytezz-alamin.vercel.app).
+I also built an **admin version** of this app for hotel employees to manage rooms, bookings, and guests. The repository is [here](https://github.com/CodeWithAlamin/HotelBytezz), and the live site is [here](https://hotelbytezz-alamin.vercel.app).
 
 ## Features
 
-- View all available cabins with descriptions and images.
-- Book a cabin based on available dates and select the number of guests.
+- View all available rooms with descriptions and images.
+- Book a room based on available dates and select the number of guests.
 - Sign in with Google to manage bookings.
-- View your booked cabins, edit them, or cancel if needed.
+- View your booked rooms, edit them, or cancel if needed.
 - Update your profile information.
 - Fully responsive on all devices (I made sure to make it mobile-friendly!).
 

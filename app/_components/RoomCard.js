@@ -2,8 +2,8 @@ import { UsersIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
 import Link from "next/link";
 
-function CabinCard({ cabin }) {
-  const { id, name, maxCapacity, regularPrice, discount, image } = cabin;
+function RoomCard({ room }) {
+  const { id, name, maxCapacity, regularPrice, discount, image } = room;
 
   return (
     <div className="grid grid-cols-1 grid-rows-[1fr_1fr] md:grid-rows-1 md:grid-cols-[1fr_2fr] border-primary-800 border">
@@ -11,7 +11,7 @@ function CabinCard({ cabin }) {
         <Image
           fill
           src={image}
-          alt={`Cabin ${name}`}
+          alt={`Room ${name}`}
           className="object-cover  border-r border-primary-800"
         />
       </div>
@@ -19,7 +19,7 @@ function CabinCard({ cabin }) {
       <div className="">
         <div className="pt-5 pb-4 px-7 bg-primary-950">
           <h3 className="text-accent-500 font-semibold text-2xl mb-3">
-            Cabin {name}
+            Room {name}
           </h3>
 
           <div className="flex gap-3 items-center mb-2">
@@ -48,7 +48,7 @@ function CabinCard({ cabin }) {
 
         <div className="bg-primary-950 border-t border-t-primary-800 text-right">
           <Link
-            href={`/cabins/${id}`}
+            href={`/rooms/${id}`}
             className="border-l border-primary-800 py-4 px-6 inline-block hover:bg-accent-600 transition-all hover:text-primary-900"
           >
             Details & reservation &rarr;
@@ -59,4 +59,4 @@ function CabinCard({ cabin }) {
   );
 }
 
-export default CabinCard;
+export default RoomCard;

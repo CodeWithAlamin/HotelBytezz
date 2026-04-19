@@ -1,6 +1,6 @@
 import SubmitButton from "@/app/_components/SubmitButton";
 import { updateReservation } from "@/app/_lib/actions";
-import { getBooking, getCabin } from "@/app/_lib/data-service";
+import { getBooking, getRoom } from "@/app/_lib/data-service";
 
 export const metadata = {
   title: "Edit Reservation",
@@ -8,8 +8,8 @@ export const metadata = {
 
 export default async function Page({ params }) {
   const bookingId = params.bookingId;
-  const { numGuests, observations, cabinId } = await getBooking(bookingId);
-  const { maxCapacity } = await getCabin(cabinId);
+  const { numGuests, observations, roomId } = await getBooking(bookingId);
+  const { maxCapacity } = await getRoom(roomId);
 
   return (
     <div>

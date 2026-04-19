@@ -20,7 +20,7 @@ function ReservationCard({ booking, onDelete }) {
     numGuests,
     status,
     created_at,
-    cabins: { name, image },
+    rooms: { name, image },
   } = booking;
 
   return (
@@ -29,7 +29,7 @@ function ReservationCard({ booking, onDelete }) {
         <Image
           fill
           src={image}
-          alt={`Cabin ${name}`}
+          alt={`Room ${name}`}
           className="object-cover border-r border-primary-800"
         />
       </div>
@@ -37,7 +37,7 @@ function ReservationCard({ booking, onDelete }) {
       <div className="flex-grow px-6 py-3 flex flex-col">
         <div className="flex items-center justify-between">
           <h3 className="text-xl font-semibold">
-            {numNights} nights in Cabin {name}
+            {numNights} nights in Room {name}
           </h3>
           {isPast(new Date(startDate)) ? (
             <span className="bg-yellow-800 text-yellow-200 h-7 px-3 uppercase text-xs font-bold flex items-center rounded-sm">

@@ -21,14 +21,14 @@ function isAlreadyBooked(range, datesArr) {
   );
 }
 
-function DateSelector({ settings, cabin, bookedDates }) {
+function DateSelector({ settings, room, bookedDates }) {
   const { range, setRange, resetRange } = useReservation();
 
   const displayRange = isAlreadyBooked(range, bookedDates) ? {} : range;
 
-  const { regularPrice, discount } = cabin;
+  const { regularPrice, discount } = room;
   const numNights = differenceInDays(displayRange.to, displayRange.from);
-  const cabinPrice = numNights * (regularPrice - discount);
+  const roomPrice = numNights * (regularPrice - discount);
 
   const { minBookingLength, maxBookingLength } = settings;
 
@@ -93,7 +93,7 @@ function DateSelector({ settings, cabin, bookedDates }) {
                   Total
                 </span>{" "}
                 <span className="text-lg md:text-2xl font-semibold">
-                  ${cabinPrice}
+                  ${roomPrice}
                 </span>
               </p>
             </>

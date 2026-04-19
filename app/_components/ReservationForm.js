@@ -5,22 +5,22 @@ import { useReservation } from "./ReservationContext";
 import { createReservation } from "../_lib/actions";
 import SubmitButton from "./SubmitButton";
 
-function ReservationForm({ cabin, user }) {
+function ReservationForm({ room, user }) {
   const { range, resetRange } = useReservation();
-  const { maxCapacity, regularPrice, discount, id } = cabin;
+  const { maxCapacity, regularPrice, discount, id } = room;
 
   const startDate = range.from;
   const endDate = range.to;
 
   const numNights = differenceInDays(endDate, startDate);
-  const cabinPrice = numNights * (regularPrice - discount);
+  const roomPrice = numNights * (regularPrice - discount);
 
   const bookingData = {
     startDate,
     endDate,
     numNights,
-    cabinPrice,
-    cabinId: id,
+    roomPrice,
+    roomId: id,
   };
 
   // remember that when you bind a function with data like this, the bookingData here will be the first argument of it.

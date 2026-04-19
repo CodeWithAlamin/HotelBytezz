@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Image1 from "@/public/about-1.jpg";
-import { getCabins } from "../_lib/data-service";
+import { getRooms } from "../_lib/data-service";
 
 export const revalidate = 86400;
 
@@ -9,7 +9,7 @@ export const metadata = {
 };
 
 export default async function Page() {
-  const cabins = await getCabins();
+  const rooms = await getRooms();
 
   return (
     <div className="text-lg">
@@ -24,12 +24,12 @@ export default async function Page() {
               Where nature&rsquo;s beauty and comfortable living blend
               seamlessly. Hidden away in the heart of the Italian Dolomites,
               this is your paradise away from home. But it&rsquo;s not just
-              about the luxury cabins. It&rsquo;s about the experience of
+              about the luxury rooms. It&rsquo;s about the experience of
               reconnecting with nature and enjoying simple pleasures with
               family.
             </p>
             <p>
-              Our {cabins.length} luxury cabins provide a cozy base, but the
+              Our {rooms.length} luxury rooms provide a cozy base, but the
               real freedom and peace you&rsquo;ll find in the surrounding
               mountains. Wander through lush forests, breathe in the fresh air,
               and watch the stars twinkle above from the warmth of a campfire or
@@ -45,7 +45,7 @@ export default async function Page() {
           <div className="relative aspect-square">
             <Image
               src={Image1}
-              alt="Family sitting around a fire pit in front of cabin"
+              alt="Family sitting around a fire pit in front of a room"
               placeholder="blur"
               className="object-cover"
               fill
@@ -89,10 +89,10 @@ export default async function Page() {
 
             <div>
               <a
-                href="/cabins"
+                href="/rooms"
                 className="inline-block mt-4 bg-accent-500 px-4 py-2 md:px-8 md:py-5 text-primary-800 text-lg font-semibold hover:bg-accent-600 transition-all"
               >
-                Explore our luxury cabins
+                Explore our luxury rooms
               </a>
             </div>
           </div>

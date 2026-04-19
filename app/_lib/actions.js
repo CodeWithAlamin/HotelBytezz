@@ -47,7 +47,7 @@ export async function createReservation(bookingData, formData) {
     numGuests: Number(formData.get("numGuests")),
     observations: formData.get("observations").slice(0, 1000),
     extrasPrice: 0,
-    totalPrice: bookingData.cabinPrice,
+    totalPrice: bookingData.roomPrice,
     isPaid: false,
     hasBreakfast: false,
     status: "unconfirmed",
@@ -55,9 +55,9 @@ export async function createReservation(bookingData, formData) {
 
   // By the way, you should do some server side checking like if the dates are already booked or not etc. because we just checked in the client side in the date selector which is not enough.
   await createBooking(newBooking);
-  revalidatePath(`/cabins/${bookingData.cabinId}`);
+  revalidatePath(`/rooms/${bookingData.roomId}`);
 
-  redirect("thankyou");
+  redirect("/rooms/thankyou");
 }
 ////////////////////////
 

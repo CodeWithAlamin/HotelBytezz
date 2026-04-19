@@ -2,8 +2,8 @@ import TextExpander from "@/app/_components/TextExpander";
 import { EyeSlashIcon, MapPinIcon, UsersIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
 
-function Cabin({ cabin }) {
-  const { name, description, maxCapacity, image } = cabin;
+function Room({ room }) {
+  const { name, description, maxCapacity, image } = room;
 
   return (
     <div className="grid grid-rows-[1fr_2fr] md:grid-rows-1 md:grid-cols-[3fr_4fr] gap-4 md:gap-20 border border-primary-800 py-3 px-3 md:px-10 mb-16 md:mb-24">
@@ -12,13 +12,13 @@ function Cabin({ cabin }) {
           fill
           className="object-cover"
           src={image}
-          alt={`Cabin ${name}`}
+          alt={`Room ${name}`}
         />
       </div>
 
       <div>
         <h3 className="text-accent-100 font-black text-3xl md:text-7xl mb-5 md:translate-x-[-254px] bg-primary-950 p-6 pb-1 md:w-[150%]">
-          Cabin {name}
+          Room {name}
         </h3>
 
         <p className="text-lg text-primary-300 mb-10">
@@ -51,4 +51,4 @@ function Cabin({ cabin }) {
   );
 }
 
-export default Cabin;
+export default Room;

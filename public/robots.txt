@@ -3,7 +3,7 @@ Disallow: /account/
 Disallow: /api/
 Allow: /login/
 Allow: /about/
-Allow: /cabins/
+Allow: /rooms/
 Allow: /
 
 Sitemap: https://hotelbytezz-booking-alamin.vercel.app/sitemap.xml
