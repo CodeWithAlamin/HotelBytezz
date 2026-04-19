@@ -16,7 +16,7 @@ function isAlreadyBooked(range, datesArr) {
     range.from &&
     range.to &&
     datesArr.some((date) =>
-      isWithinInterval(date, { start: range.from, end: range.to })
+      isWithinInterval(date, { start: range.from, end: range.to }),
     )
   );
 }
@@ -52,17 +52,20 @@ function DateSelector({ settings, cabin, bookedDates }) {
         mode="range"
         onSelect={setRange}
         selected={displayRange}
-        min={minBookingLength + 1}
-        max={maxBookingLength}
+        // min and max props removed; not supported by DayPicker
         fromMonth={new Date()}
         fromDate={new Date()}
         toYear={new Date().getFullYear() + 5}
         captionLayout="dropdown"
         numberOfMonths={isMobile ? 1 : 2}
-        disabled={(curDate) =>
-          isPast(curDate) ||
-          bookedDates.some((date) => isSameDay(date, curDate))
-        }
+        disabled={(curDate) => {
+          if (isPast(curDate)) return true;
+          if (bookedDates.some((date) => isSameDay(date, curDate))) return true;
+          if (range.from && !range.to) {
+            if (curDate < range.from) return true;
+          }
+          return false;
+        }}
       />
 
       <div className="flex flex-wrap justify-center items-center gap-2 md:gap-0 md:justify-between p-2 md:px-8 bg-accent-500 text-primary-800">
