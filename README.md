@@ -40,7 +40,7 @@ Welcome to <b>HotelBytezz</b>! This is the customer version of the <a href="http
 <!-- Screenshot -->
 <a align="center" href="https://hotelbytezz-alamin.vercel.app">
 
-![Screenshot](./public/thumbnail.png)
+![Screenshot](./public/thumbnail.jpeg)
 
 </a>
 

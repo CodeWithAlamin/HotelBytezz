@@ -59,11 +59,11 @@ export default function RootLayout({ children }) {
       />
       <meta
         property="og:image"
-        content="https://hotelbytezz-alamin.vercel.app/thumbnail.png"
+        content="https://hotelbytezz-alamin.vercel.app/thumbnail.jpeg"
       />
       <meta
         property="og:image:secure_url"
-        content="https://hotelbytezz-alamin.vercel.app/thumbnail.png"
+        content="https://hotelbytezz-alamin.vercel.app/thumbnail.jpeg"
       />
       <meta property="og:site_name" content="HotelBytezz" />
       <meta
@@ -88,7 +88,7 @@ export default function RootLayout({ children }) {
       />
       <meta
         name="twitter:image"
-        content="https://hotelbytezz-alamin.vercel.app/thumbnail.png"
+        content="https://hotelbytezz-alamin.vercel.app/thumbnail.jpeg"
       />
       <meta
         name="twitter:url"
