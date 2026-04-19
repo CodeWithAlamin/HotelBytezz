@@ -2,20 +2,20 @@
 
   <img src="./public/logo.png" alt="logo" width="90" height="auto">
 
-  <h1>The Wild Oasis - Booking</h1>
+  <h1>HotelBytezz - Booking</h1>
 
   <h3>
-    <a href="https://the-wild-oasis-booking-alamin.vercel.app">
+    <a href="https://hotelbytezz-booking-alamin.vercel.app">
       <strong>Live Site</strong>
     </a>
   </h3>
 
   <div align="center">
-    <a href="https://the-wild-oasis-booking-alamin.vercel.app">View website</a>
+    <a href="https://hotelbytezz-alamin.vercel.app">View website</a>
     •
-    <a href="https://github.com/CodeWithAlamin/The-Wild-Oasis-Booking/issues">Report Bug</a>
+    <a href="https://github.com/CodeWithAlamin/HotelBytezz-Booking/issues">Report Bug</a>
     •
-    <a href="https://github.com/CodeWithAlamin/The-Wild-Oasis-Booking/pulls">Request Feature</a>
+    <a href="https://github.com/CodeWithAlamin/HotelBytezz-Booking/pulls">Request Feature</a>
   </div>
 
   <hr>
@@ -34,11 +34,11 @@
 
 <!-- Brief -->
 <p align="center">
-Welcome to <b>The Wild Oasis</b>! This is the customer version of the <a href="https://github.com/CodeWithAlamin/The-Wild-Oasis">hotel management</a> web app, where users can view and book cabins based on availability, manage their bookings, and update their profiles. This project was a great learning experience for me as I explored Next.js, Auth.js (NextAuth), and many other advanced techniques.
+Welcome to <b>HotelBytezz</b>! This is the customer version of the <a href="https://github.com/CodeWithAlamin/HotelBytezz">hotel management</a> web app, where users can view and book cabins based on availability, manage their bookings, and update their profiles. This project was a great learning experience for me as I explored Next.js, Auth.js (NextAuth), and many other advanced techniques.
 </p>
 
 <!-- Screenshot -->
-<a align="center" href="https://the-wild-oasis-booking-alamin.vercel.app">
+<a align="center" href="https://hotelbytezz-alamin.vercel.app">
 
 ![Screenshot](./public/thumbnail.png)
 
@@ -46,11 +46,11 @@ Welcome to <b>The Wild Oasis</b>! This is the customer version of the <a href="h
 
 ## Live Site
 
-Check out the live app here: [The Wild Oasis - Booking](https://the-wild-oasis-booking-alamin.vercel.app/)
+Check out the live app here: [HotelBytezz](https://hotelbytezz-alamin.vercel.app/)
 
 ## Admin Version
 
-I also built an **admin version** of this app for hotel employees to manage cabins, bookings, and guests. The repository is [here](https://github.com/CodeWithAlamin/The-Wild-Oasis), and the live site is [here](https://the-wild-oasis-alamin.vercel.app).
+I also built an **admin version** of this app for hotel employees to manage cabins, bookings, and guests. The repository is [here](https://github.com/CodeWithAlamin/HotelBytezz), and the live site is [here](https://hotelbytezz-alamin.vercel.app).
 
 ## Features
 
@@ -79,7 +79,7 @@ To run this project locally:
 
 1. Clone the repo:
    ```bash
-   git clone https://github.com/CodeWithAlamin/The-Wild-Oasis-Booking.git
+   git clone https://github.com/CodeWithAlamin/HotelBytezz.git
    ```
 2. Install dependencies:
    ```bash

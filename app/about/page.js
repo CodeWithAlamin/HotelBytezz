@@ -15,7 +15,7 @@ export default async function Page() {
     <div className="text-lg">
       <div className="mb-14">
         <h1 className="text-3xl md:text-4xl mb-10 text-accent-400 font-medium">
-          Welcome to The Wild Oasis
+          Welcome to HotelBytezz
         </h1>
 
         <div className="grid gap-4 md:gap-10 grid-cols-1 grid-rows-[auto_auto] md:grid-rows-1 md:grid-cols-[2fr_1fr] ">
@@ -67,24 +67,24 @@ export default async function Page() {
               fill
               className="object-cover"
               src="/about-2.jpg" // This is a placeholder image for the image that will come from a 3rd party database
-              alt="Family that manages The Wild Oasis"
+              alt="Family that manages HotelBytezz"
             />
           </div>
 
           <div className="space-y-8">
             <p>
-              Since 1962, The Wild Oasis has been a cherished family-run
-              retreat. Started by our grandparents, this haven has been nurtured
-              with love and care, passing down through our family as a testament
-              to our dedication to creating a warm, welcoming environment.
+              Since 1962, HotelBytezz has been a cherished family-run retreat.
+              Started by our grandparents, this haven has been nurtured with
+              love and care, passing down through our family as a testament to
+              our dedication to creating a warm, welcoming environment.
             </p>
             <p>
-              Over the years, we&rsquo;ve maintained the essence of The Wild
-              Oasis, blending the timeless beauty of the mountains with the
-              personal touch only a family business can offer. Here,
-              you&rsquo;re not just a guest; you&rsquo;re part of our extended
-              family. So join us at The Wild Oasis soon, where tradition meets
-              tranquility, and every visit is like coming home.
+              Over the years, we&rsquo;ve maintained the essence of HotelBytezz,
+              blending the timeless beauty of the mountains with the personal
+              touch only a family business can offer. Here, you&rsquo;re not
+              just a guest; you&rsquo;re part of our extended family. So join us
+              at HotelBytezz soon, where tradition meets tranquility, and every
+              visit is like coming home.
             </p>
 
             <div>

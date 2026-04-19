@@ -19,8 +19,8 @@ export default function Page() {
           Welcome to paradise.
         </h1>
         <p className="sr-only">
-          Explore The Wild Oasis Booking by Alamin (CodeWithAlamin). Find unique
-          destinations, thrilling activities, and plan your next wild getaway.
+          Explore HotelBytezz by Alamin (CodeWithAlamin). Find unique
+          destinations, thrilling activities, and plan your next hotel getaway.
         </p>
         <Link
           href="/cabins"

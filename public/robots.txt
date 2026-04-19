@@ -6,4 +6,4 @@ Allow: /about/
 Allow: /cabins/
 Allow: /
 
-Sitemap: https://the-wild-oasis-booking-alamin.vercel.app/sitemap.xml
+Sitemap: https://hotelbytezz-booking-alamin.vercel.app/sitemap.xml
