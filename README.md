@@ -5,7 +5,7 @@
   <h1>HotelBytezz - Booking</h1>
 
   <h3>
-    <a href="https://hotelbytezz-booking-alamin.vercel.app">
+    <a href="https://hotelbytezz-alamin.vercel.app">
       <strong>Live Site</strong>
     </a>
   </h3>
@@ -13,9 +13,9 @@
   <div align="center">
     <a href="https://hotelbytezz-alamin.vercel.app">View website</a>
     •
-    <a href="https://github.com/CodeWithAlamin/HotelBytezz-Booking/issues">Report Bug</a>
+    <a href="https://github.com/CodeWithAlamin/HotelBytezz/issues">Report Bug</a>
     •
-    <a href="https://github.com/CodeWithAlamin/HotelBytezz-Booking/pulls">Request Feature</a>
+    <a href="https://github.com/CodeWithAlamin/HotelBytezz/pulls">Request Feature</a>
   </div>
 
   <hr>
@@ -34,7 +34,7 @@
 
 <!-- Brief -->
 <p align="center">
-Welcome to <b>HotelBytezz</b>! This is the customer version of the <a href="https://github.com/CodeWithAlamin/HotelBytezz">hotel management</a> web app, where users can view and book rooms based on availability, manage their bookings, and update their profiles. This project was a great learning experience for me as I explored Next.js, Auth.js (NextAuth), and many other advanced techniques.
+Welcome to <b>HotelBytezz</b>! This is the customer version of the <a href="https://github.com/CodeWithAlamin/HotelBytezz-admin">HotelBytezz admin</a> web app, where users can view and book rooms based on availability, manage their bookings, and update their profiles. This project was a great learning experience for me as I explored Next.js, Auth.js (NextAuth), and many other advanced techniques.
 </p>
 
 <!-- Screenshot -->
@@ -50,7 +50,7 @@ Check out the live app here: [HotelBytezz](https://hotelbytezz-alamin.vercel.app
 
 ## Admin Version
 
-I also built an **admin version** of this app for hotel employees to manage rooms, bookings, and guests. The repository is [here](https://github.com/CodeWithAlamin/HotelBytezz), and the live site is [here](https://hotelbytezz-alamin.vercel.app).
+I also built an **admin version** of this app for hotel employees to manage rooms, bookings, and guests. The repository is [here](https://github.com/CodeWithAlamin/HotelBytezz-admin), and the live site is [here](https://hotelbytezz-admin-alamin.vercel.app).
 
 ## Features
 
