@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://hotelbytezz-booking-alamin.vercel.app/</loc>
+    <loc>https://hotelbytezz-alamin.vercel.app/</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://hotelbytezz-booking-alamin.vercel.app/about</loc>
+    <loc>https://hotelbytezz-alamin.vercel.app/about</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hotelbytezz-booking-alamin.vercel.app/rooms</loc>
+    <loc>https://hotelbytezz-alamin.vercel.app/rooms</loc>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://hotelbytezz-booking-alamin.vercel.app/rooms/thankyou</loc>
+    <loc>https://hotelbytezz-alamin.vercel.app/rooms/thankyou</loc>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://hotelbytezz-booking-alamin.vercel.app/rooms/[roomId]</loc>
+    <loc>https://hotelbytezz-alamin.vercel.app/rooms/[roomId]</loc>
     <priority>0.9</priority>
   </url>
 </urlset>
